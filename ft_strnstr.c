@@ -6,12 +6,11 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:44:36 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/11 11:24:34 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:28:34 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-#include<stdio.h>
+#include"libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -37,13 +36,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return (0);
-}
-
-
-
-int main()
-{
-	printf("%s\n",ft_strnstr("phrrase test phrase", "test", 10));
-	return (0);
-
 }

@@ -6,12 +6,11 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:57:42 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/11 12:04:24 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:34:41 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<stdio.h>
+#include"libft.h"
 
 int	ft_atoi(const char*nptr)
 {
@@ -23,14 +22,15 @@ int	ft_atoi(const char*nptr)
 	sign = 1;
 	i = 0;
 	while (nptr[i] == ' ' || nptr[i] == '\f' || nptr[i] == '\n'
-		|| nptr[i] == '\r' || nptr[i] == '\t'
-		|| nptr[i] == '\v')
+		|| nptr[i] == '\r' || nptr[i] == '\t' || nptr[i] == '\v')
 		i++;
 	if (nptr[i] == '-')
+	{
 		sign = -1;
+		i++;
+	}
 	else if (nptr[i] == '+')
-		sign = 1;
-	i++;
+		i++;
 	if (nptr[i] < 48 && nptr[i] > 57)
 		return (0);
 	while ((nptr[i] > 47 && nptr[i] < 58))
@@ -40,20 +40,3 @@ int	ft_atoi(const char*nptr)
 	}
 	return (sign * res);
 }
-
-
-int	main()
-{
-	int	var;
-	int var2;
-	char *str = "-k10";
-
-	var = atoi(str);
-	var2 = ft_atoi(str);
-
-	printf("mon atoi donne :%d\n", var2);
-	printf("le vrai atoi donne :%d\n", var);
-
-	return (0);
-}
-

@@ -6,11 +6,11 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:06:27 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/09 15:21:57 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:28:24 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include"libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -23,11 +23,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (0);
-}
-
-int	main()
-{
-	printf("resultat :%d\n", ft_strncmp("test", "tesu", 4));
 	return (0);
 }

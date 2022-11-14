@@ -6,11 +6,11 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:52:44 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/08 11:56:08 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:28:06 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include"libft.h"
 
 size_t	ft_strlen(const char *s)
 {

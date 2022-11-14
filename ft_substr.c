@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 15:22:31 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/12 13:26:41 by kgezgin          ###   ########.fr       */
+/*   Created: 2022/11/12 13:35:38 by kgezgin           #+#    #+#             */
+/*   Updated: 2022/11/12 13:56:35 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char	*pointer;
+	char	*res;
 
 	i = 0;
-	pointer = (char *)s;
-	while (pointer[i] != '\0' && i < n)
+	res = malloc(sizeof(*res) * len);
+	if (!res)
+		return (0);
+	while (i < (len - 1))				//a revoir le -1
 	{
-		if (pointer[i] == c)
-			return (&pointer[i]);
+		res[i] = s[start - 1];			//a revoir le -1
+		start++;
 		i++;
 	}
+	res[i] = '\0';
+	return (res);
+}
+/*
+int	main()
+{
+	printf("res :%s\n", ft_substr("salutjesuis", 1, 5));
 	return (0);
 }
+*/

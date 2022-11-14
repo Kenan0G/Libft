@@ -6,11 +6,11 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:56:49 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/08 16:26:06 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:34:42 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include"libft.h"
 
 void	*ft_bzero(void *s, size_t n)
 {
