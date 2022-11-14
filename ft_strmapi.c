@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:40:45 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 11:56:20 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/14 12:42:46 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	return (new_str);
+}
+
+int	main()
+{
+	char (*f)(unsigned int, char);
+
+	typede
 }

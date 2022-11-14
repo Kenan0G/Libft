@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:00:04 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/12 13:33:09 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/14 14:05:07 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j++;
 	res = malloc(sizeof(*res) * (ft_strlen(s1) - (len - i - j) + 1));
 	if (!res)
-		return (0);
+		return (NULL);
 	while (i < (len - j))
 	{
 		res[k] = s1[i];

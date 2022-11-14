@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 15:19:59 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 11:57:38 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/14 13:54:58 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,10 @@ char	*ft_itoa(int n)
 	if (!res)
 		return (0);
 	if (n == 0)
-	{
-		res[0] = '0';
-		return (res);
-	}
-	if (n < 0)
+		return ("0");
+	if (n == -2147483648)
+		return ("-2147483648");
+	else if (n < 0)
 	{
 		res[0] = '-';
 		n = n * (-1);
@@ -58,10 +57,8 @@ char	*ft_itoa(int n)
 	return (res);
 }
 
-/*
-int	main()
+int	main(void)
 {
-	printf("resultat :[%s]\n", ft_itoa(-5845));
+	printf("resultat :[%s]\n", ft_itoa(2147483647));
 	return (0);
 }
-*/
