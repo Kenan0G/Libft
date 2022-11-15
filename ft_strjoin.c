@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 13:57:30 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 11:56:46 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/15 10:32:56 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
-	char	*res;
+	int				i;
+	int				j;
+	unsigned char	*res;
 
 	i = 0;
 	j = 0;
@@ -28,14 +28,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		res[i] = s1[i];
 		i++;
 	}
-	while (s2[i] != '\0')
+	while (s2[j] != '\0')
 	{
 		res[i] = s2[j];
 		i++;
 		j++;
 	}
 	res[i] = '\0';
-	return (res);
+	return ((char *)res);
 }
 
 /*

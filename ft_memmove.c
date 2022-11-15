@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:51:21 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 14:12:01 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/14 14:38:32 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,6 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t		i;
-	char		*str;
-	char		*temp;
-	const char	*str2;
-
-	i = 0;
-	str = dest;
-	temp = str;
-	str2 = src;
-	
-	while (i < n)
-	{
-		temp[i] = str2[i];
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		str[n] = temp[i];
-		i++;
-		n--;
-	}
-	return (dest);
-	/*
 	unsigned char	*t;
 	unsigned char	*s;
 
@@ -58,10 +34,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			*t-- = *s--;
 	}
 	return (dest);
-	*/
 }
 
-
+/*
 int	main()
 {
 	char	var1[50] = "1234567";
@@ -77,3 +52,4 @@ int	main()
 	printf("[%s]\n", var3);
 	return (0);
 }
+*/

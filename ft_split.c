@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:13:08 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 11:56:58 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/15 14:09:43 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ char	**ft_split(char const *s, char c)
 		while (*s != '\0' && !ft_isset(*s, c))
 			s++;
 	}
+	split[i] = NULL;
 	return (split);
 }
 

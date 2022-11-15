@@ -6,59 +6,66 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 15:19:59 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 13:54:58 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/15 14:46:55 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_nbrlen(int nb)
+static char	*ft_convert(int n, int len, int sign)
 {
-	int	count;
+	char			*str;
+	unsigned int	x;
 
-	count = 0;
-	if (nb < 0)
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	if (sign)
 	{
-		nb = nb * (-1);
-		count++;
+		*str = '-';
+		x = -n;
 	}
-	while (nb > 0)
+	else
+		x = n;
+	str[len] = '\0';
+	len--;
+	while (len >= sign)
 	{
-		nb = nb / 10;
-		count++;
+		str[len] = (x % 10) + 48;
+		x = x / 10;
+		len--;
 	}
-	return (count);
+	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	int		count;
-	char	*res;
+	int		len;
+	int		temp;
+	int		sign;
 
-	count = ft_nbrlen(n);
-	res = malloc(sizeof(*res) * (count + 1));
-	if (!res)
-		return (0);
+	len = 0;
+	sign = 0;
+	if (n < 0)
+	{
+		len++;
+		sign++;
+	}
+	temp = n;
+	while (temp != 0)
+	{
+		temp = temp / 10;
+		len++;
+	}
 	if (n == 0)
-		return ("0");
-	if (n == -2147483648)
-		return ("-2147483648");
-	else if (n < 0)
-	{
-		res[0] = '-';
-		n = n * (-1);
-	}
-	while (n > 0)
-	{
-		res[count - 1] = (n % 10) + '0';
-		n = n / 10;
-		count--;
-	}
-	return (res);
+		len++;
+	return (ft_convert(n, len, sign));
 }
 
+/*
 int	main(void)
 {
-	printf("resultat :[%s]\n", ft_itoa(2147483647));
+	printf("resultat :[%s]\n", ft_itoa(10));
 	return (0);
 }
+*/

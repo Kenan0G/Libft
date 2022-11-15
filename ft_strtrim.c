@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:00:04 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 14:05:07 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/15 13:02:59 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (ft_isset(s1[len - j - 1], set))
 		j++;
-	res = malloc(sizeof(*res) * (ft_strlen(s1) - (len - i - j) + 1));
+	res = malloc(sizeof(*res) * (ft_strlen(s1) - (i + j) + 1));
 	if (!res)
 		return (NULL);
 	while (i < (len - j))
@@ -51,6 +51,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 		k++;
 		i++;
 	}
-	res[i] = '\0';
+	res[k] = '\0';
 	return (res);
 }
+/*
+int	main()
+{
+	char	const *s1 = "abcwdw";
+	char 	const *set = "-";
+	char	*str = ft_strtrim(s1, set);
+
+	printf("[%s]\n", str);
+	return (0);
+}
+*/

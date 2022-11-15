@@ -6,37 +6,37 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:57:42 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/12 13:34:41 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/14 18:44:25 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_atoi(const char*nptr)
+int	ft_atoi(const char *nptr)
 {
-	int		res;
 	int		sign;
-	int		i;
+	int		num;
+	char	*str;
 
-	res = 0;
+	str = (char *)nptr;
 	sign = 1;
-	i = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\f' || nptr[i] == '\n'
-		|| nptr[i] == '\r' || nptr[i] == '\t' || nptr[i] == '\v')
-		i++;
-	if (nptr[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (nptr[i] == '+')
-		i++;
-	if (nptr[i] < 48 && nptr[i] > 57)
+	num = 0;
+	while ((*str == ' ') || (*str == '\t') || (*str == '\n')
+		|| (*str == '\v') || (*str == '\f') || (*str == '\r'))
+		str++;
+	if (*str + 1 == '-' || *str + 1 == '+')
 		return (0);
-	while ((nptr[i] > 47 && nptr[i] < 58))
+	else if (*str == '-')
 	{
-		res = res * 10 + nptr[i] - '0';
-		i++;
+		sign *= -1;
+		str++;
 	}
-	return (sign * res);
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		num = (num * 10) + (*str - '0');
+		str++;
+	}
+	return (num * sign);
 }

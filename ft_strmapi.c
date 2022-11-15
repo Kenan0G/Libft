@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:40:45 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 12:42:46 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/15 12:53:13 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int 	i;
+	unsigned int	i;
 	char			*new_str;
 
 	new_str = (char *)s;
@@ -27,12 +27,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		new_str[i] = f(i, s[i]);
 		i++;
 	}
+	new_str[i] = '\0';
 	return (new_str);
 }
-
+/*
 int	main()
 {
 	char (*f)(unsigned int, char);
 
 	typede
 }
+*/

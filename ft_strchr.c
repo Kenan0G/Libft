@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:41:14 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/11 14:49:45 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/14 18:59:38 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strchr(const char *s, int c)
 			return (&pointer[i]);
 		i++;
 	}
-	return (0);
+	if (s[i] == c)
+		return (&pointer[i]);
+	return (NULL);
 }

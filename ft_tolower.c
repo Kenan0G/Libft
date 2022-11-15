@@ -6,13 +6,13 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:40:15 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/09 13:41:56 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/14 15:22:14 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	if (c > 64 && c < 91)
-		c = c +32;
+	if (c >= 65 && c <= 90)
+		c = c + 32;
 	return (c);
 }
