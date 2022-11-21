@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:56:38 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 18:45:00 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/18 10:03:26 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	pointer = (char *)s;
 	while (i != -1)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return (&pointer[i]);
 		i--;
 	}

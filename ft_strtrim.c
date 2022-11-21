@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:00:04 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/15 13:02:59 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/18 10:13:56 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	while (s1[i] != '\0' && ft_isset(s1[i], set))
 		i++;
-	while (ft_isset(s1[len - j - 1], set))
+	while (ft_isset(s1[len - j - 1], set) && i < len)
 		j++;
 	res = malloc(sizeof(*res) * (ft_strlen(s1) - (i + j) + 1));
 	if (!res)

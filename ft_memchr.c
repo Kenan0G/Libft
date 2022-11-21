@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:22:31 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/12 13:26:41 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/18 09:58:51 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	pointer = (char *)s;
-	while (pointer[i] != '\0' && i < n)
+	while (i < n)
 	{
-		if (pointer[i] == c)
+		if (pointer[i] == (char)c)
 			return (&pointer[i]);
 		i++;
 	}

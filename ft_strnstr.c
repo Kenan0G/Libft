@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 16:44:36 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 18:26:13 by kgezgin          ###   ########.fr       */
+/*   Updated: 2022/11/18 10:03:57 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j++;
 			i++;
 		}
+		i -= j;
 		i++;
 	}
 	return (NULL);
