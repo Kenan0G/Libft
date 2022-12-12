@@ -6,11 +6,10 @@
 #    By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 14:45:13 by kgezgin           #+#    #+#              #
-#    Updated: 2022/11/17 12:05:21 by kgezgin          ###   ########.fr        #
+#    Updated: 2022/12/12 15:44:16 by kgezgin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC_DIR = ./srcs/
 SRCS = ft_strlen.c\
 	   ft_isalpha.c\
 	   ft_isalnum.c\
@@ -71,4 +70,6 @@ clean :
 fclean : clean	
 	${RM} ${NAME} 
 re : fclean all bonus
-.PHONY : all clean fclean re
+
+	
+.PHONY : all clean fclean 
